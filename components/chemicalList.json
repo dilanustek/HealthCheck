@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "Parabens",
+    "effect": "Bad",
+    "products": ["Shampoo", "Moisturizers"],
+    "details": "Parabens mimic estrogen in the body and may disrupt our natural hormonal balance."
+  },
+  {
+    "id": 2,
+    "name": "Fragrance",
+    "effect": "Bad for Sensitive Skin",
+    "products": ["Any products for skin"],
+    "details": "Fragrances are blends of aromatics, which give beauty products their trademark scents, are often chemical cocktails. “Fragrance” is essentially a catch-all term for “secret ingredients”. The problem with fragrance is that the law does not require companies to tell consumers what is actually in these secret “blends”. It is impossible to know what any blend is made of."
+  },
+  {
+    "id": 3,
+    "name": "Phthalates",
+    "effect": "Bad",
+    "products": ["Shampoo", "Moisturizers", "Nail Polish"],
+    "details": "Phthalates are a group of chemicals used to make products more liquid and less dry"
+  },
+  {
+    "id": 4,
+    "name": "Triclosan",
+    "effect": "Bad",
+    "products": ["Hand Sanitizers"],
+    "details": "Triclosan (also known as Microban) is another chemical commonly used as a preservative in skincare products. Any skincare product that claims to have anti-bacterial properties likely includes triclosan."
+  },
+  {
+    "id": 5,
+    "name": "Sodium Lauryl Sulfate",
+    "effect": "Bad",
+    "products": ["Shampoos", "Soaps"],
+    "details": "SLS is one of the most common ingredients used in shampoos, soaps, body washes, and just about anything that creates a thick foam. Sodium lauryl sulfate (SLS) is in up to 90% of skincare products."
+  },
+  {
+    "id": 6,
+    "name": "Propylene Glycol",
+    "effect": "Bad",
+    "products": ["Skincare"],
+    "details": "Propylene glycol (also known as PG) is an ingredient in a variety of liquid skincare products, as well as in antifreeze, brake fluid, and paints. PG may allow harmful chemicals to seep further into your skin and bloodstream than they could otherwise do on their own. PG has been linked to some cases of skin inflammation and irritation. While PG can prevent moisture loss by creating a seal over your skin, it can also make your skin drier by drawing moisture from the deeper layers of your skin towards the top-most layers."
+  },
+  {
+    "id": 7,
+    "name": "Paraffin wax",
+    "effect": "Bad",
+    "products": ["Skincare"],
+    "details": "Petroleum/Mineral Oil Based product - Used in skincare products for a variety of reasons, petrochemicals have been linked to major health concerns. Petroleum-based products can be contaminated with dozens of toxic chemicals, some known to cause cancer and damage nerves.\n22% of beauty products contain toxic levels of these harmful chemicals. Petroleum-based ingredients can also penetrate the skin, causing further health hazards. A 2009 study showed that using mineral oil products has the potential to increase the rate of tumor growth."
+  },
+  {
+    "id": 8,
+    "name": "Toluene",
+    "effect": "Bad",
+    "products": ["Skincare"],
+    "details": "Petroleum/Mineral Oil Based product - Used in skincare products for a variety of reasons, petrochemicals have been linked to major health concerns. Petroleum-based products can be contaminated with dozens of toxic chemicals, some known to cause cancer and damage nerves.\n22% of beauty products contain toxic levels of these harmful chemicals. Petroleum-based ingredients can also penetrate the skin, causing further health hazards. A 2009 study showed that using mineral oil products has the potential to increase the rate of tumor growth."
+  },
+  {
+    "id": 9,
+    "name": "Polyethylene glycol",
+    "effect": "Bad",
+    "products": ["Skincare"],
+    "details": "Petroleum/Mineral Oil Based product - Used in skincare products for a variety of reasons, petrochemicals have been linked to major health concerns. Petroleum-based products can be contaminated with dozens of toxic chemicals, some known to cause cancer and damage nerves.\n22% of beauty products contain toxic levels of these harmful chemicals. Petroleum-based ingredients can also penetrate the skin, causing further health hazards. A 2009 study showed that using mineral oil products has the potential to increase the rate of tumor growth."
+  },
+  {
+    "id": 10,
+    "name": "Diethanolamine",
+    "effect": "Bad",
+    "products": ["Skincare"],
+    "details": "Petroleum/Mineral Oil Based product - Used in skincare products for a variety of reasons, petrochemicals have been linked to major health concerns. Petroleum-based products can be contaminated with dozens of toxic chemicals, some known to cause cancer and damage nerves.\n22% of beauty products contain toxic levels of these harmful chemicals. Petroleum-based ingredients can also penetrate the skin, causing further health hazards. A 2009 study showed that using mineral oil products has the potential to increase the rate of tumor growth."
+  },
+  {
+    "id": 11,
+    "name": "Ethanolamine",
+    "effect": "Bad",
+    "products": ["Skincare"],
+    "details": "Petroleum/Mineral Oil Based product - Used in skincare products for a variety of reasons, petrochemicals have been linked to major health concerns. Petroleum-based products can be contaminated with dozens of toxic chemicals, some known to cause cancer and damage nerves.\n22% of beauty products contain toxic levels of these harmful chemicals. Petroleum-based ingredients can also penetrate the skin, causing further health hazards. A 2009 study showed that using mineral oil products has the potential to increase the rate of tumor growth."
+  },
+  {
+    "id": 12,
+    "name": "DMDM hydantoin",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 13,
+    "name": "BHUT (butylated hydroxytoluene)",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 14,
+    "name": "Bronopol",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 15,
+    "name": "Diazolidinyl urea",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 16,
+    "name": "Sodium hydrozymethylglycinate",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 17,
+    "name": "Imidazolidinyl urea",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 18,
+    "name": "Methenamine",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 19,
+    "name": "Quarternium-15",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 20,
+    "name": "Quarternium-18",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 21,
+    "name": "Quarternium-26",
+    "effect": "Bad",
+    "products": ["Something"],
+    "details": "Formaldehyde- FRP’s are used in a variety of products to prevent bacterial growth. They are known to cause skin irritations, but pose a more dangerous risk of nasal and nasopharyngeal cancers when inhaled, and are classified by the U.S. Food and Drug Administration as a carcinogen. (Think: nail polish remover)"
+  },
+  {
+    "id": 22,
+    "name": "Acetylene Black",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 23,
+    "name": "Arogen",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 24,
+    "name": "Arotone",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 25,
+    "name": "Channel Black",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 26,
+    "name": "D & C Black No. 2",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 27,
+    "name": "Furnace Black",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 28,
+    "name": "Lamp Black",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 29,
+    "name": "Thermal Black",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 30,
+    "name": "Pigment Black 6",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 31,
+    "name": "Pigment Black 7",
+    "effect": "Bad",
+    "products": ["Cosmetics"],
+    "details": "Carbon black is another carcinogen that has been linked to both skin cancer and organ toxicity."
+  },
+  {
+    "id": 32,
+    "name": "Octinoxate",
+    "effect": "Bad",
+    "products": ["Sunscreen", "lipstick"],
+    "details": "Valued for its ability to keep cosmetics intact after sun exposure, octinoxate has been linked to endocrine disruption, breast cancer, and thyroid disorders. It is commonly found in sunscreens, skin creams, and lipsticks."
+  },
+  {
+    "id": 33,
+    "name": "Glycerin",
+    "effect": "Good",
+    "products": ["Moisturizer"],
+    "details": "A common moisturizer."
+  },
+  {
+    "id": 34,
+    "name": "Retinol",
+    "effect": "Really good",
+    "products": ["Skincare"],
+    "details": "Anti-aging"
+  },
+  {
+    "id": 35,
+    "name": "Hyaluronic Acid",
+    "effect": "Really good",
+    "products": ["Skincare"],
+    "details": "Anti-aging"
+  },
+  {
+    "id": 36,
+    "name": "Vitamin C",
+    "effect": "Really good",
+    "products": ["Skincare"],
+    "details": "Anti-aging"
+  }
+]
