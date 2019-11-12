@@ -15,11 +15,11 @@ export default class ChemicalItem extends Component {
 
   getHealthIcon = healthLevel => {
     if (healthLevel === 'Good') {
-      return '../assets/greenCheck.png';
+      return require('../assets/greenCheck.png');
     } else if (healthLevel === 'Bad') {
-      return '../assets/redX.jpg';
+      return require('../assets/redX.jpg');
     } else {
-      return '../assets/yellow.png';
+      return require('../assets/yellow.png');
     }
   }
 
@@ -34,8 +34,8 @@ export default class ChemicalItem extends Component {
         >
           <View style={styles.chemicalRow}>
             <Text> {this.props.name} </Text>
-            {/* <Image source={require(this.getHealthIcon(this.props.effect))} /> */}
-            <Image style={styles.chemicalIcon} source={require('../assets/yellow.png')} />
+            <Image style={styles.chemicalIcon} source={this.getHealthIcon(this.props.effect)} />
+            {/* <Image style={styles.chemicalIcon} source={require('../assets/yellow.png')} /> */}
           </View>
         </TouchableHighlight>
       </View>

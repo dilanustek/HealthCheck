@@ -15,7 +15,6 @@ export default class FilterBar extends Component {
           onChangeText={searchText => this.props.updateSearch(searchText)}
           value={this.props.searchQuery}
         />
-        <Text>{this.props.searchQuery} </Text>
       </View>
     );
   }
