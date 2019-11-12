@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
 
 export default class ChemicalItem extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = { open: false }
-  }
+  // onPress = () => {
+  //   navigate('ChemicalScreen')
+  // }
 
-  onPress = () => {
-    // this.setState({
-    //   open? false : true;
-    // }) 
+  static navigationOptions = {
+    title: 'Health Check',
+  };
+
+  // iconLink = '../assets/greenCheck.png';
+
+  getHealthIcon = healthLevel => {
+    if (healthLevel === 'Good') {
+      return '../assets/greenCheck.png';
+    } else if (healthLevel === 'Bad') {
+      return '../assets/redX.jpg';
+    } else {
+      return '../assets/yellow.png';
+    }
   }
 
   render() {
+    const navigate = this.props.navigation.navigate;
+
     return (
       <View style={styles.container}>
         <TouchableHighlight
           style={styles.button}
-          onPress={this.onPress}
+          onPress={() => navigate('Chemical')}
         >
-          <Text> {this.props.name} </Text>
+          <View style={styles.chemicalRow}>
+            <Text> {this.props.name} </Text>
+            {/* <Image source={require(this.getHealthIcon(this.props.effect))} /> */}
+            <Image style={styles.chemicalIcon} source={require('../assets/yellow.png')} />
+          </View>
         </TouchableHighlight>
       </View>
     )
@@ -37,6 +52,14 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#DDDDDD',
-    padding: 20
+    padding: 20,
   },
+  chemicalRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  chemicalIcon: {
+    height: 15,
+    width: 15,
+  }
 });

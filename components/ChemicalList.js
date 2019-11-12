@@ -19,7 +19,10 @@ export default class ChemicalList extends Component {
       <View style={styles.container}>
         <FlatList
           data={filteredList}
-          renderItem={({ item }) => <ChemicalItem name={item.name} />}
+          renderItem={({ item }) => <ChemicalItem
+            name={item.name}
+            navigation={this.props.navigation}
+            effect={item.effect} />}
           keyExtractor={(item) => item.id.toString()}
         />
       </View>
