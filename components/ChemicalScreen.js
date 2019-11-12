@@ -10,7 +10,8 @@ export default class ChemicalScreen extends Component {
   render() {
     return (
       <View>
-        <Text>Hello world I'm a chemical!</Text>
+        <Text>Hello world I'm a chemical! My name is
+          {this.props.navigation.getParam('name')}</Text>
       </View>
     );
   }

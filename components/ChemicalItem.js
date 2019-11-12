@@ -30,15 +30,15 @@ export default class ChemicalItem extends Component {
       <View style={styles.container}>
         <TouchableHighlight
           style={styles.button}
-          onPress={() => navigate('Chemical')}
+          onPress={() => navigate('Chemical', { name: this.props.name })}
         >
           <View style={styles.chemicalRow}>
             <Text> {this.props.name} </Text>
-            <Image style={styles.chemicalIcon} source={this.getHealthIcon(this.props.effect)} />
-            {/* <Image style={styles.chemicalIcon} source={require('../assets/yellow.png')} /> */}
+            <Image style={styles.chemicalIcon}
+              source={this.getHealthIcon(this.props.effect)} />
           </View>
         </TouchableHighlight>
-      </View>
+      </View >
     )
   }
 }
