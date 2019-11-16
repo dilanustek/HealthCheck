@@ -10,7 +10,10 @@ export default class ChemicalItem extends Component {
   getHealthIcon = healthLevel => {
     if (healthLevel === 'Good') {
       return require('../assets/greenCheck.png');
-    } else if (healthLevel === 'Bad') {
+    } else if (healthLevel === 'Really good') {
+      return require('../assets/greenCheck.png');
+    }
+    else if (healthLevel === 'Bad') {
       return require('../assets/redX.jpg');
     } else {
       return require('../assets/yellow.png');
@@ -19,6 +22,7 @@ export default class ChemicalItem extends Component {
 
   render() {
     const navigate = this.props.navigation.navigate;
+    loadedImage = this.getHealthIcon(this.props.effect);
 
     return (
       <View style={styles.container}>
@@ -32,8 +36,14 @@ export default class ChemicalItem extends Component {
         >
           <View style={styles.chemicalRow}>
             <Text> {this.props.name} </Text>
-            <Image style={styles.chemicalIcon}
-              source={this.getHealthIcon(this.props.effect)} />
+            <View style={styles.chemIcons}>
+              <Image style={styles.chemicalIcon}
+                source={loadedImage} />
+              {(this.props.effect === 'Really good') &&
+                <Image style={styles.chemicalIcon} source={loadedImage}
+                />
+              }
+            </View>
           </View>
         </TouchableHighlight>
       </View >
@@ -55,6 +65,12 @@ const styles = StyleSheet.create({
   chemicalRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  chemIcons: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+    height: 15,
+    width: 40,
   },
   chemicalIcon: {
     height: 15,
