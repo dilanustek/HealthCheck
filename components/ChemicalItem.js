@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
+import HealthIndicator from './HealthIndicator.js';
 
 export default class ChemicalItem extends Component {
 
@@ -7,22 +8,8 @@ export default class ChemicalItem extends Component {
     title: 'Health Check',
   };
 
-  getHealthIcon = healthLevel => {
-    if (healthLevel === 'Good') {
-      return require('../assets/greenCheck.png');
-    } else if (healthLevel === 'Really good') {
-      return require('../assets/greenCheck.png');
-    }
-    else if (healthLevel === 'Bad') {
-      return require('../assets/redX.jpg');
-    } else {
-      return require('../assets/yellow.png');
-    }
-  }
-
   render() {
     const navigate = this.props.navigation.navigate;
-    loadedImage = this.getHealthIcon(this.props.effect);
 
     return (
       <View style={styles.container}>
@@ -35,15 +22,8 @@ export default class ChemicalItem extends Component {
           })}
         >
           <View style={styles.chemicalRow}>
-            <Text> {this.props.name} </Text>
-            <View style={styles.chemIcons}>
-              <Image style={styles.chemicalIcon}
-                source={loadedImage} />
-              {(this.props.effect === 'Really good') &&
-                <Image style={styles.chemicalIcon} source={loadedImage}
-                />
-              }
-            </View>
+            <Text style={styles.chemicalName}> {this.props.name} </Text>
+            <HealthIndicator effect={this.props.effect} />
           </View>
         </TouchableHighlight>
       </View >
@@ -66,14 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  chemIcons: {
-    flexDirection: 'row-reverse',
-    justifyContent: 'space-between',
-    height: 15,
-    width: 40,
+  chemicalName: {
+    fontSize: 18,
   },
-  chemicalIcon: {
-    height: 15,
-    width: 15,
-  }
 });
