@@ -3,15 +3,9 @@ import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native'
 
 export default class ChemicalItem extends Component {
 
-  // onPress = () => {
-  //   navigate('ChemicalScreen')
-  // }
-
   static navigationOptions = {
     title: 'Health Check',
   };
-
-  // iconLink = '../assets/greenCheck.png';
 
   getHealthIcon = healthLevel => {
     if (healthLevel === 'Good') {
@@ -30,7 +24,11 @@ export default class ChemicalItem extends Component {
       <View style={styles.container}>
         <TouchableHighlight
           style={styles.button}
-          onPress={() => navigate('Chemical', { name: this.props.name })}
+          onPress={() => navigate('Chemical', {
+            name: this.props.name,
+            products: this.props.products,
+            details: this.props.details
+          })}
         >
           <View style={styles.chemicalRow}>
             <Text> {this.props.name} </Text>

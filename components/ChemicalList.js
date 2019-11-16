@@ -22,7 +22,10 @@ export default class ChemicalList extends Component {
           renderItem={({ item }) => <ChemicalItem
             name={item.name}
             navigation={this.props.navigation}
-            effect={item.effect} />}
+            effect={item.effect}
+            products={item.products}
+            details={item.details}
+          />}
           keyExtractor={(item) => item.id.toString()}
         />
       </View>
