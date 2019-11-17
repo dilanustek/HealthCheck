@@ -19,6 +19,15 @@ export default class HomeScreen extends Component {
     this.setState({ hasCameraPermission: status === 'granted' });
   }
 
+  onPress = () => {
+    this.setState({
+      type:
+        this.state.type === Camera.Constants.Type.back
+          ? Camera.Constants.Type.front
+          : Camera.Constants.Type.back,
+    })
+  };
+
   render() {
     const { hasCameraPermission } = this.state;
     if (hasCameraPermission === null) {
@@ -33,14 +42,7 @@ export default class HomeScreen extends Component {
               style={styles.buttonPositioner}>
               <TouchableOpacity
                 style={styles.flipTouchable}
-                onPress={() => {
-                  this.setState({
-                    type:
-                      this.state.type === Camera.Constants.Type.back
-                        ? Camera.Constants.Type.front
-                        : Camera.Constants.Type.back,
-                  });
-                }}>
+                onPress={this.onPress}>
                 <Text style={styles.flipText}> Flip </Text>
               </TouchableOpacity>
             </View>
