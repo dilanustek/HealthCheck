@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, Li, Ul } from 'react-native-elements'
 import { StyleSheet, View } from 'react-native';
+import HealthIndicator from './HealthIndicator';
 
 export default class ChemicalScreen extends Component {
 
@@ -15,7 +16,10 @@ export default class ChemicalScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>{this.props.navigation.getParam('name')}</Text>
+        <View style={styles.header}>
+          <Text style={styles.title}>{this.props.navigation.getParam('name')}</Text>
+          <HealthIndicator effect={this.props.navigation.getParam('effect')} />
+        </View>
         <View style={styles.products}>
           <Text h4>Common Products</Text>
           {products}
@@ -32,17 +36,22 @@ export default class ChemicalScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    margin: 10,
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingEnd: 10,
   },
   title: {
-    margin: 10,
     fontSize: 28,
     fontWeight: "bold",
   },
   products: {
-    margin: 10,
+    marginTop: 10,
     marginBottom: 20,
   },
   details: {
-    margin: 10,
   },
 });

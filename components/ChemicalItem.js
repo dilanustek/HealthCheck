@@ -17,8 +17,9 @@ export default class ChemicalItem extends Component {
           style={styles.button}
           onPress={() => navigate('Chemical', {
             name: this.props.name,
+            effect: this.props.effect,
             products: this.props.products,
-            details: this.props.details
+            details: this.props.details,
           })}
         >
           <View style={styles.chemicalRow}>
