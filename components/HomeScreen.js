@@ -32,12 +32,14 @@ export default class HomeScreen extends Component {
 
   takePicture = () => {
     if (this.camera) {
-      this.camera.takePictureAsync({ onPictureSaved: this.onPictureSaved });
+      this.camera.takePictureAsync({ onPictureSaved: this.onPictureSaved })
+        .then(() => this.camera.pausePreview());
     }
   };
 
   onPictureSaved = photo => {
     console.log(photo);
+    this.props.navigation.navigate('Photo', { photo: photo });
   }
 
   render() {
@@ -51,14 +53,17 @@ export default class HomeScreen extends Component {
       return (
         <View style={styles.page}>
           <Camera style={styles.camera} type={this.state.type} ref={(ref) => { this.camera = ref }} >
-            {/* DOES that CREATE the this.camera variable? */}
             <View style={styles.buttonPositioner}>
-              <TouchableOpacity
-                style={styles.flipTouchable}
-                onPress={this.onPress}>
-                <Text style={styles.flipText}> Flip </Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.captureButton} onPress={this.takePicture} />
+              <View style={styles.bottomPositioner}>
+
+                <TouchableOpacity
+                  style={styles.flipTouchable}
+                  onPress={this.onPress}>
+                  <Text style={styles.flipText}> Flip </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.captureButton} onPress={this.takePicture} />
+
+              </View>
             </View>
 
           </Camera>
@@ -79,12 +84,20 @@ const styles = StyleSheet.create({
   buttonPositioner: {
     flex: 1,
     backgroundColor: 'transparent',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    alignItems: 'stretch',
+  },
+  bottomPositioner: {
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   flipTouchable: {
-    flex: 0.15,
-    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
   },
   flipText: {
     fontSize: 18,
