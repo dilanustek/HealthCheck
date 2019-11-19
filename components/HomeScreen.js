@@ -1,7 +1,9 @@
-import React, { Component, Dimensions } from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
+import Icon from 'react-native-vector-icons/Feather';
+
 
 export default class HomeScreen extends Component {
 
@@ -28,8 +30,19 @@ export default class HomeScreen extends Component {
     })
   };
 
+  takePicture = () => {
+    if (this.camera) {
+      this.camera.takePictureAsync({ onPictureSaved: this.onPictureSaved });
+    }
+  };
+
+  onPictureSaved = photo => {
+    console.log(photo);
+  }
+
   render() {
     const { hasCameraPermission } = this.state;
+
     if (hasCameraPermission === null) {
       return <View />;
     } else if (hasCameraPermission === false) {
@@ -37,15 +50,17 @@ export default class HomeScreen extends Component {
     } else {
       return (
         <View style={styles.page}>
-          <Camera style={styles.camera} type={this.state.type}>
-            <View
-              style={styles.buttonPositioner}>
+          <Camera style={styles.camera} type={this.state.type} ref={(ref) => { this.camera = ref }} >
+            {/* DOES that CREATE the this.camera variable? */}
+            <View style={styles.buttonPositioner}>
               <TouchableOpacity
                 style={styles.flipTouchable}
                 onPress={this.onPress}>
                 <Text style={styles.flipText}> Flip </Text>
               </TouchableOpacity>
+              <TouchableOpacity style={styles.captureButton} onPress={this.takePicture} />
             </View>
+
           </Camera>
         </View>
       );
@@ -76,4 +91,11 @@ const styles = StyleSheet.create({
     margin: 10,
     color: 'white',
   },
+  captureButton: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#fff",
+    alignSelf: 'flex-end',
+  }
 });
