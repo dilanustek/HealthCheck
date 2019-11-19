@@ -80,10 +80,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'transparent',
     flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   flipTouchable: {
     flex: 0.15,
-    alignSelf: 'flex-end',
     alignItems: 'center',
   },
   flipText: {
@@ -96,6 +96,5 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 30,
     backgroundColor: "#fff",
-    alignSelf: 'flex-end',
   }
 });
