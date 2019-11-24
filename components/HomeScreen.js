@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TouchableHighlight } from 'react-native';
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Ocr from 'react-native-tesseract-ocr';
 
 export default class HomeScreen extends Component {
 
-  static navigationOptions = {
-    title: 'Health Check',
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: 'Health Check',
+      headerRight: () => (
+        <TouchableHighlight onPress={() => {
+          navigation.navigate('Search');
+        }} >
+          <Icon name="search" size={30} color="#900" />
+        </TouchableHighlight>
+      ),
+    };
   };
 
   state = {
@@ -27,7 +37,12 @@ export default class HomeScreen extends Component {
     );
   }
 
-  onPress = () => {
+  onPressSearch = () => {
+    console.log("search press");
+    this.props.navigation.navigate('Search');
+  };
+
+  onPressFlip = () => {
     this.setState({
       type:
         this.state.type === Camera.Constants.Type.back
@@ -64,7 +79,7 @@ export default class HomeScreen extends Component {
 
                 <TouchableOpacity
                   style={styles.flipTouchable}
-                  onPress={this.onPress}>
+                  onPress={this.onPressFlip}>
                   <Text style={styles.flipText}> Flip </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.captureButton} onPress={this.takePicture} />
