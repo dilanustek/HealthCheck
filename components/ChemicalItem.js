@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import HealthIndicator from './HealthIndicator.js';
 
 export default class ChemicalItem extends Component {
