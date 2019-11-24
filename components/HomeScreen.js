@@ -18,6 +18,13 @@ export default class HomeScreen extends Component {
   async componentDidMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     this.setState({ hasCameraPermission: status === 'granted' });
+    this.didFocusListener = this.props.navigation.addListener(
+      'didFocus',
+      (obj) => {
+        console.log('homescreen didfocus start')
+        this.camera.resumePreview();
+      }
+    );
   }
 
   onPress = () => {
